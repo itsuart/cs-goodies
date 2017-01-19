@@ -41,4 +41,9 @@
 
             return Value.Equals(otherMaybe.Value);
         }
+        
+        public override int GetHashCode(){
+            if (! HasValue) return 0;
+            return Value.GetHashCode();
+        }
     }
